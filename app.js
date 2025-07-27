@@ -24,9 +24,7 @@ function agregarAmigo() {
     alert("Por favor, inserte un nombre.");
     ganadorSorteo();
   } else {
-    console.log(`${cadena}`);
     amigos.push(cadena);
-    console.log(amigos);
     input.value = "";
     mostrarLista();
     ganadorSorteo();
@@ -46,10 +44,8 @@ function mostrarLista() {
 
 function ganadorSorteo() {
   if (amigos.length > 0) {
-    console.log(" hay elementos en el array ");
 
   } else if (amigos.length == 0) {
-    console.log("no hay elementos en el array");
   }
 }
 
@@ -57,7 +53,6 @@ function ganadorSorteo() {
 function sortearAmigo(params) {
      let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoAleatorio = amigos[indiceAleatorio];
-    console.log(amigoAleatorio);
 
     ganador.innerHTML = "";
 
